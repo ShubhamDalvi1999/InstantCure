@@ -38,10 +38,23 @@ class CustomCard extends StatelessWidget {
               children: [
                 ListTile(
                     leading: const Icon(Icons.album, size: 60),
-                    title:
-                        Text('$index $title', style: TextStyle(fontSize: 30.0)),
-                    subtitle:
-                        Text('$sevirity', style: TextStyle(fontSize: 18.0))),
+                    title: Text('$index $title',
+                        style: const TextStyle(fontSize: 30.0)),
+                    subtitle: Text('$sevirity',
+                        style: const TextStyle(fontSize: 18.0))),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "$discription",
+                      style: const TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
+                const FlutterLogo(
+                  size: 70,
+                ),
                 Expanded(
                   child: Align(
                     alignment: Alignment.bottomRight,
