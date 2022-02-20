@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:instant_cure_app/utils/Gradients.dart';
+import 'package:instant_cure_app/utils/animations.dart';
 
 class CustomCard extends StatelessWidget {
-  CustomCard(this.data, this.index, {Key? key}) : super(key: key);
   final List<String> data;
   final int index;
+  final Widget gif;
+  CustomCard({
+    Key? key,
+    required this.data,
+    required this.index,
+    required this.gif,
+  }) : super(key: key);
+
   Gradients g = new Gradients();
+
   @override
   Widget build(BuildContext context) {
     String title = data[0];
@@ -52,9 +61,7 @@ class CustomCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                const FlutterLogo(
-                  size: 70,
-                ),
+                gif,
                 Expanded(
                   child: Align(
                     alignment: Alignment.bottomRight,

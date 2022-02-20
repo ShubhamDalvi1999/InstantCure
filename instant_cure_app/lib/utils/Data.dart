@@ -3,7 +3,9 @@ class Data {
     [
       "Running Nose",
       "Low Sevirity",
-      "Do not take medication for a day or two, let the nose run"
+      '''Do not take medication for a day or two, let the nose run
+        2. Drink warm water
+        3. Take waff'''
     ],
     [
       "Acidity ",
@@ -16,12 +18,20 @@ class Data {
       "Apply zendubam on forehead and eyes & let all the water come out of eyes",
     ],
     [
-      "Cough/ Throat",
+      "Wet Cough",
       "Medium to Low Sevirity",
-      '''  1.Hold the salty water in throat and do that thing 
+      '''  1.Hold the salty water in throat and do the thing 
         2.Take waff (termeric and water boiled)      
         3.Hold lavang in mouth''',
     ],
+    [
+      "Dry Cough",
+      "Medium to Low Sevirity",
+      '''  1.Hold the salty water in throat and do the thing 
+        2.Drink only warm water     
+        3.Hold addrak in mouth''',
+    ],
+    ["Body Pain", "Low to Berable", "Take rest as much as possible"]
   ];
 
   List<List<String>> getData() {
