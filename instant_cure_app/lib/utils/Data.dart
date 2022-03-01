@@ -31,7 +31,14 @@ class Data {
         2.Drink only warm water     
         3.Hold addrak in mouth''',
     ],
-    ["Body Pain", "Low to Berable", "Take rest as much as possible"]
+    ["Body Pain", "Low to Berable", "Take rest as much as possible"],
+    [
+      "Inertia Natuea",
+      "Medium to Low Sevirity",
+      '''  1.Don't eat spicy or oily or fried food before or during travel 
+        2.Eat proper quantity of food,don't overeat or undereat      
+        3.Preferably sit on front seat and have good exposure to fresh air ''',
+    ],
   ];
 
   List<List<String>> getData() {
