@@ -12,28 +12,32 @@ class InstantCure extends StatefulWidget {
 }
 
 class _InstantCureState extends State<InstantCure> {
-  Data d = Data();
   AnimationData animation = AnimationData();
 
   @override
   Widget build(BuildContext context) {
-    int index = d.getLenght();
     Map<int, Widget?> anim = animation.data;
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Cure to ur quantum scale problems"),
-        ),
-        body: Center(
-          child: CarouselSlider.builder(
-              itemCount: d.getLenght(),
-              itemBuilder: (context, index, realIndex) {
-                return CustomCard(
-                  data: d.data[index],
-                  gif: anim[index]!,
-                  index: index,
-                );
-              },
-              options: CarouselOptions(height: 500)),
-        ));
+      appBar: AppBar(
+        title: const Text("Cure to ur quantum scale problems"),
+      ),
+      body: Center(
+        child: CarouselSlider.builder(
+            itemCount: Data.data.length,
+            itemBuilder: (context, index, realIndex) {
+              return CustomCard(
+                data: Data.data[index],
+                gif: anim[index]!,
+                index: index,
+              );
+            },
+            options: CarouselOptions(height: 500)),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(Icons.add, size: 40),
+        backgroundColor: Colors.blue,
+      ),
+    );
   }
 }

@@ -28,6 +28,10 @@ class AnimationData {
         "https://assets1.lottiefiles.com/private_files/lf30_lnZijR.json",
         width: 100,
         height: 100),
+    6: Lottie.network(
+        "https://assets8.lottiefiles.com/packages/lf20_sp2a5b.json",
+        width: 50,
+        height: 50),
   };
 
   Map<int, Widget> getData() {

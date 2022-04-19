@@ -1,5 +1,18 @@
+import 'package:flutter/material.dart';
+
 class Data {
-  List<List<String>> data = [
+  String title;
+  String sevirity;
+  String actions_to_take;
+  //todo :List<Image> helpful_imgs;
+
+  Data({
+    required this.title,
+    required this.sevirity,
+    required this.actions_to_take,
+  });
+
+  static List<List<String>> data = [
     [
       "Running Nose",
       "Low Sevirity",
@@ -33,7 +46,7 @@ class Data {
     ],
     ["Body Pain", "Low to Berable", "Take rest as much as possible"],
     [
-      "Inertia Natuea",
+      "Inertia Nausea",
       "Medium to Low Sevirity",
       '''  1.Don't eat spicy or oily or fried food before or during travel 
         2.Eat proper quantity of food,don't overeat or undereat      
