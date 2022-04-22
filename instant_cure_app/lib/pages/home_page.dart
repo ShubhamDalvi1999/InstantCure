@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:instant_cure_app/pages/adding_cure.dart';
 import 'package:instant_cure_app/utils/Data.dart';
 import 'package:instant_cure_app/utils/animations.dart';
 import 'package:instant_cure_app/widgets/CustomCard.dart';
@@ -15,6 +16,12 @@ class _InstantCureState extends State<InstantCure> {
   AnimationData animation = AnimationData();
 
   @override
+  void initState() {
+    //refresh the page here
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     Map<int, Widget?> anim = animation.data;
     return Scaffold(
@@ -27,14 +34,19 @@ class _InstantCureState extends State<InstantCure> {
             itemBuilder: (context, index, realIndex) {
               return CustomCard(
                 data: Data.data[index],
-                gif: anim[index]!,
+                //gif: anim[index]!,
                 index: index,
               );
             },
             options: CarouselOptions(height: 500)),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => NewCure()))
+              .then((value) => setState(() {}));
+          ;
+        },
         child: const Icon(Icons.add, size: 40),
         backgroundColor: Colors.blue,
       ),

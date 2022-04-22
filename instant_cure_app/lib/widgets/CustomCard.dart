@@ -5,12 +5,12 @@ import 'package:instant_cure_app/utils/animations.dart';
 class CustomCard extends StatelessWidget {
   final List<String> data;
   final int index;
-  final Widget gif;
+  //final Widget gif;
   CustomCard({
     Key? key,
     required this.data,
     required this.index,
-    required this.gif,
+    //required this.gif,
   }) : super(key: key);
 
   Gradients g = new Gradients();
@@ -61,7 +61,7 @@ class CustomCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                gif,
+                //gif,
                 Expanded(
                   child: Align(
                     alignment: Alignment.bottomRight,
